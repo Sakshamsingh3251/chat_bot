@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - Gemini Powered</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🤖 AI Companion</h1>
+                <p class="subtitle">Powered by Gemini API</p>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="nav-btn active" data-tab="chat">💬 Chat</button>
+            <button class="nav-btn" data-tab="news">📰 Top 3 News</button>
+            <button class="nav-btn" data-tab="facts">✨ Fun Facts</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chat Section -->
+            <section id="chat" class="tab-content active">
+                <div class="chat-container">
+                    <div class="messages-box" id="messagesBox">
+                        <div class="message bot-message">
+                            <div class="message-content">
+                                <p>Hello! 👋 I'm your AI assistant powered by Gemini. How can I help you today?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-area">
+                        <form id="chatForm" class="chat-form">
+                            <div class="input-wrapper">
+                                <input 
+                                    type="text" 
+                                    id="userInput" 
+                                    placeholder="Ask me anything..." 
+                                    autocomplete="off"
+                                    required
+                                >
+                                <button type="submit" class="send-btn" id="sendBtn">
+                                    <span>Send</span>
+                                    <span class="send-icon">➤</span>
+                                </button>
+                            </div>
+                        </form>
+                        <div id="typingIndicator" class="typing-indicator" style="display: none;">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Top 3 News Section -->
+            <section id="news" class="tab-content">
+                <div class="top-3-container">
+                    <div class="section-header">
+                        <h2>📰 Top 3 News Headlines</h2>
+                        <button id="generateNewsBtn" class="generate-btn">Generate News</button>
+                    </div>
+                    <div id="newsContainer" class="cards-grid">
+                        <p class="placeholder">Click "Generate News" to fetch top headlines</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fun Facts Section -->
+            <section id="facts" class="tab-content">
+                <div class="top-3-container">
+                    <div class="section-header">
+                        <h2>✨ Top 3 Fun Facts</h2>
+                        <button id="generateFactsBtn" class="generate-btn">Generate Facts</button>
+                    </div>
+                    <div id="factsContainer" class="cards-grid">
+                        <p class="placeholder">Click "Generate Facts" to fetch fun facts</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <!-- <footer class="footer">
+            <p>&copy; 2026 AI Chatbot. Built with Groq API</p>
+        </footer> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
